@@ -6,7 +6,7 @@ extern crate taxonomy_mock as taxonomy;
 extern crate openzwave_adapter;
 
 #[cfg(test)]
-describe! library {
+describe! library_integration_test {
     before_each {
         use openzwave_adapter::OpenzwaveAdapter;
         use taxonomy::adapter::AdapterManagerHandleImpl;

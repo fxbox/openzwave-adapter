@@ -1,3 +1,6 @@
+#![feature(plugin)]
+#![cfg_attr(test, plugin(stainless))]
+
 #[cfg(feature = "mock")] extern crate taxonomy_mock as taxonomy;
 #[cfg(not(feature = "mock"))] extern crate foxbox_taxonomy as taxonomy;
 
@@ -410,5 +413,20 @@ impl taxonomy::adapter::Adapter for OpenzwaveAdapter {
 
             (id, value_result)
         }).collect()
+    }
+}
+
+
+#[cfg(test)]
+describe! library_unit_test {
+    before_each {
+        use taxonomy::adapter::AdapterManagerHandleImpl;
+        use std::sync::Arc;
+    }
+
+    it "should init" {
+        let m = AdapterManagerHandleImpl;
+        let arc = Arc::new(m);
+        let adapter = OpenzwaveAdapter::init(&arc).unwrap();
     }
 }
