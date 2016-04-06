@@ -13,3 +13,6 @@ transformable_channels = "^0.1"
 log = "^0.3"
 taxonomy_mock = { path = "./taxonomy_mock/" }
 transformable_channels_mock = { path = "./transformable_channels_mock/" }
+
+[dev-dependencies]
+stainless = "0.1.4"

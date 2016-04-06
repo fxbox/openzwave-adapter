@@ -412,10 +412,3 @@ impl taxonomy::adapter::Adapter for OpenzwaveAdapter {
         }).collect()
     }
 }
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-    }
-}

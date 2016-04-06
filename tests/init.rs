@@ -1,15 +1,22 @@
+#![feature(plugin)]
+#![cfg_attr(test, plugin(stainless))]
+
+
 extern crate taxonomy_mock as taxonomy;
 extern crate openzwave_adapter;
 
-use openzwave_adapter::OpenzwaveAdapter;
-use taxonomy::adapter::AdapterManagerHandleImpl;
+#[cfg(test)]
+describe! library {
+    before_each {
+        use openzwave_adapter::OpenzwaveAdapter;
+        use taxonomy::adapter::AdapterManagerHandleImpl;
 
-use std::sync::Arc;
+        use std::sync::Arc;
+    }
 
-#[test]
-fn test_init() {
-    let m = AdapterManagerHandleImpl;
-    let arc = Arc::new(m);
-    let adapter = OpenzwaveAdapter::init(&arc);
-    assert!(true);
+    it "should init" {
+        let m = AdapterManagerHandleImpl;
+        let arc = Arc::new(m);
+        let adapter = OpenzwaveAdapter::init(&arc).unwrap();
+    }
 }
