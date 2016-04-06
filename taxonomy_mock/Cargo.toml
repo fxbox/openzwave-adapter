@@ -1,0 +1,6 @@
+[package]
+name = "taxonomy_mock"
+version = "0.1.0"
+
+[dependencies]
+transformable_channels_mock = { path = "../transformable_channels_mock/"}

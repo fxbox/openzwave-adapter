@@ -1,6 +1,16 @@
 extern crate openzwave_stateful as openzwave;
-extern crate foxbox_taxonomy as taxonomy;
-extern crate transformable_channels;
+
+// #[cfg(test)]
+extern crate taxonomy_mock as taxonomy;
+// #[cfg(not(test))]
+// extern crate foxbox_taxonomy as taxonomy;
+
+
+// #[cfg(not(test))]
+// extern crate transformable_channels;
+// #[cfg(test)]
+extern crate transformable_channels_mock as transformable_channels;
+
 #[macro_use]
 extern crate log;
 
@@ -413,4 +423,3 @@ mod tests {
     fn it_works() {
     }
 }
-

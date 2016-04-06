@@ -8,3 +8,5 @@ openzwave-stateful = { git = "https://github.com/fxbox/openzwave-stateful-rust" 
 foxbox_taxonomy = { git = "https://github.com/fxbox/taxonomy.git", rev = "c222794d238072920857fea55e55d522ae75c192" }
 transformable_channels = "^0.1"
 log = "^0.3"
+taxonomy_mock = { path = "./taxonomy_mock/" }
+transformable_channels_mock = { path = "./transformable_channels_mock/" }
