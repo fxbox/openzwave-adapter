@@ -1,15 +1,11 @@
+#[cfg(feature = "mock")] extern crate taxonomy_mock as taxonomy;
+#[cfg(not(feature = "mock"))] extern crate foxbox_taxonomy as taxonomy;
+
+#[cfg(not(feature = "mock"))] extern crate transformable_channels;
+#[cfg(feature = "mock")] extern crate transformable_channels_mock as transformable_channels;
+
+
 extern crate openzwave_stateful as openzwave;
-
-// #[cfg(test)]
-extern crate taxonomy_mock as taxonomy;
-// #[cfg(not(test))]
-// extern crate foxbox_taxonomy as taxonomy;
-
-
-// #[cfg(not(test))]
-// extern crate transformable_channels;
-// #[cfg(test)]
-extern crate transformable_channels_mock as transformable_channels;
 
 #[macro_use]
 extern crate log;

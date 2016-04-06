@@ -3,6 +3,9 @@ name = "openzwave-adapter"
 version = "0.1.0"
 authors = ["Julien Wajsberg <felash@gmail.com>"]
 
+[features]
+mock = []
+
 [dependencies]
 openzwave-stateful = { git = "https://github.com/fxbox/openzwave-stateful-rust" }
 foxbox_taxonomy = { git = "https://github.com/fxbox/taxonomy.git", rev = "c222794d238072920857fea55e55d522ae75c192" }
