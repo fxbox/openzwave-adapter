@@ -5,6 +5,7 @@ authors = ["Julien Wajsberg <felash@gmail.com>"]
 
 [dependencies]
 openzwave-stateful = { git = "https://github.com/fxbox/openzwave-stateful-rust" }
-foxbox_taxonomy = { git = "https://github.com/fxbox/taxonomy.git", rev = "c222794d238072920857fea55e55d522ae75c192" }
+# TODO before merge: Link with master instead of fork
+foxbox_taxonomy = { git = "https://github.com/JohanLorenzo/taxonomy.git", rev = "4af5903" }
 transformable_channels = "^0.1"
 log = "^0.3"
